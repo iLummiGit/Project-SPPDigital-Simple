@@ -24,7 +24,6 @@ def tampilkan_statistik(siswa, pembayaran):
     print("------------------------------")
 
     for data_siswa in siswa:
-        # kumpulkan pembayaran milik siswa ini
         bulan_dibayar = []
         nominal_siswa = 0
         for data_bayar in pembayaran:
@@ -32,7 +31,6 @@ def tampilkan_statistik(siswa, pembayaran):
                 bulan_dibayar.append(data_bayar["bulan"])
                 nominal_siswa += data_bayar["nominal"]
 
-        # pisahkan bulan lunas dan belum, urut sesuai kalender
         bulan_lunas = []
         bulan_belum = []
         for bulan in BULAN:
